@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<!-- Peter Valleskey -->
+<!-- Visual Frameworks 10/2011-->
+<!-- Project 1 -->
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="Visual Frameworks project 1 assignment" />
+<meta name="keywords" content="HTML5, mobile development, Full Sail University" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="user-scalable=no, width=device-width" />
+<title>Adventuring Group Creator</title>
+</head>
+<body>
+<form action="#" method="post">
+  <fieldset>
+    <legend>Add An Adventurer</legend>
+    <div>
+      <label for="name">Adventurer's name:</label>
+      <input name="name" id="name" />
+    </div>
+    <div> 
+      Age:
+      <input type="range" name ="age" id="age" min="18" max="65" />
+    </div>
+    Choose gender:
+    <div>
+      <input type="radio" name="sex" id="male" value="male" />
+      Male 
+    </div>
+    <div>
+      <input type="radio" name="sex" id="female" value="female" />
+      Female 
+    </div>
+    <div> 
+    Select the Adventurer's role and class:
+      <select name="classes">
+        <optgroup label="Tank">
+          <option>Warrior</option>
+        </optgroup>
+        <optgroup label="DPS">
+          <option>Rogue</option>
+          <option>Mage</option>
+          <option>Hunter</option>
+        </optgroup>
+        <optgroup label="Healer">
+          <option>Priest</option>
+        </optgroup>
+      </select>
+    </div>
+    <div>
+      <label for="date">Date added to party:</label> <input type="date" name="date" id="date" placeholder="10/20/2011" />
+    </div>
+    <div>
+      <input type="checkbox" name="guild" id="guild" value="true" /> Is a member of the guild?
+    </div>
+    <div>
+      <textarea id="comments" placeholder="Comments here."></textarea>
+    </div>
+    <div>
+    <input type="submit" value="Add member"/>
+    </div>
+  </fieldset>
+</form>
+<div><a href="#">Clear stored data</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Display all data</a></div>
+</body>
+</html>

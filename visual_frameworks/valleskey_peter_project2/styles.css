@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* Peter Valleskey
+Visual Frameworks 10/2011
+Project 2 */
+
+body {
+	font-family:"Courier New", Courier, monospace;
+	background:#CCC;
+}
+a {
+	margin-right: 20px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px;
+}
+nav {
+	text-align:center;
+}
+h1 {
+	text-align:center;
+	border:solid 5px;
+	padding:5px;
+}
+p {
+	text-align:center;
+	padding:5px;
+	font-size:14;
+	line-height:1.5em;
+}
+fieldset {
+	margin: 10px 20px;
+	padding:10px;
+	border:solid 5px
+}
+form {
+	width:100%;
+	height:480px;
+	overflow:scroll;
+	font-size:14px;
+}
+div {
+	line-height:1.5em;
+}
+span {
+	line-height:1.5em;
+	display:block;
+}
+ul {
+	margin-top:20px;
+	list-style:none
+}
+a:hover{color:#06F;outline:none}

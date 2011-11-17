@@ -107,8 +107,8 @@ window.addEventListener("DOMContentLoaded", function() {
     var getData = function () {
         toggleControls("on");
         if(localStorage.length === 0) {
-            alert("There is no data in local storage.");
-            window.location.reload();
+            autoFillData();
+			alert("There is no data in local storage, default data was added.");
         }
         //local storage to browser function
         var makeDiv = document.createElement('div');
@@ -139,6 +139,23 @@ window.addEventListener("DOMContentLoaded", function() {
     };
     //making item links that will be displayed in stored data
     var makeItemLinks = function(key, linksLi) {
+
+//JSON autofill data
+var autoFillData = function () {
+	var json = {
+		"contact1": {
+			"name"    : ["Name: ", "Chuck Norris"],
+			"age"     : ["Age: ", "71"],
+			"sex"     : ["Sex: ", "Male"],
+			"group"   : ["Class: ", "Warrior"],
+			"date"    : ["Date joined: ", "11/11/11"],
+			"guild"   : ["Guild member status: ", "Not in the guild."],
+			"comments": ["Comments: ", "Chuck Norris doesn't read books. He stares them down until he gets the information he wants."]
+		}
+	}
+	var id = Math.floor(Math.random()*100000000001);
+	localStorage.setItem(id, JSON.stringify(json.contact1));
+};
         
 		//edit
         var editLink = document.createElement('a');

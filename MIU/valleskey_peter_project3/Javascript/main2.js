@@ -32,7 +32,11 @@ $(document).ready(function() {
 	        console.log(data); //data = array[object { name: (HTML <input name="name">, value: (input from form) } 
 			console.log(data[0].value); // data[object].valueFromFormField
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  		window.location.reload();
+=======
+	  		//window.location.reload();
+>>>>>>> master
 =======
 	  		//window.location.reload();
 >>>>>>> master
@@ -90,11 +94,14 @@ var getSelectedRadio = function () {
 		submitHandler: function() {
 			var data = advForm.serializeArray();
 <<<<<<< HEAD
+<<<<<<< HEAD
 			parseAdvForm(data);
 		}
 	});
 });
 =======
+=======
+>>>>>>> master
 			localStorage.setItem("formdata", data);
 		}
 	});
@@ -104,5 +111,9 @@ var getSelectedRadio = function () {
 			var data = $(".myform").serializeArray();
 			localStorage.setItem("formdata", data);
 			}
+<<<<<<< HEAD
+			*/
+>>>>>>> master
+=======
 			*/
 >>>>>>> master

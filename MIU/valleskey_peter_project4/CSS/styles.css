@@ -34,7 +34,10 @@ a#logo {
 	text-align:center;
 }
 body {
+<<<<<<< HEAD
 	background-image:url(../images/bg.jpg);
+=======
+>>>>>>> master
 }
 .ui-body-c {
 	color: #FFF;

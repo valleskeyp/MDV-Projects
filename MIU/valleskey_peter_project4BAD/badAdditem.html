@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <!-- Peter Valleskey -->
 <!-- MIU 12/2011-->
-<!-- Project 3 -->
+<!-- Project 3 BAD ADDITEM-->
 <html>
 <head>
 <meta charset="utf-8" />
@@ -18,43 +18,31 @@
 <body>
 <div data-role="page">
   <div data-role="header">
-    <a href="index.html" data-role="button" data-direction="reverse">Home</a><h3>Add Adventurer</h3>
+    <a href="badindex.html" data-role="button" data-direction="reverse">Home</a><h3>Add Adventurer</h3>
   </div>
   <div data-role="content">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <form action="" method="post" id="advForm">
-=======
       <form action="" id="advForm">
->>>>>>> master
-=======
-      <form action="" id="advForm">
->>>>>>> master
-=======
-      <form action="" id="advForm">
->>>>>>> master
         <span> <small>*You must fill out all fields except comments.</small> </span>
         <div data-role="fieldcontain">
           <label for="name">Adventurer's name:</label>
-          <input type="text" name="name" id="name" class="required"/>
+          <input type="text" name="name" id="name" value="Put your name here" class="required" data-theme="e"/>
         </div>
         <div data-role="fieldcontain">
           <label for="age">Age:</label>
-          <input type="range" name="age" id="age" value="26" min="18" max="80"  />
+          <input type="range" name="age" id="age" value="80" min="18" max="80"   data-theme="e"/>
         </div>
         <div data-role="fieldcontain">
           <fieldset data-role="controlgroup" id="gender" >
             <legend>Choose gender:</legend>
-            <input type="radio" name="sex" id="male" value="Male" class="required"/>
+            <input type="radio" name="sex" id="male" value="Male" class="required" data-theme="e"/>
             <label for="male">Male</label>
-            <input type="radio" name="sex" id="female" value="Female" />
+            <input type="radio" name="sex" id="female" value="Female"  data-theme="e"/>
             <label for="female">Female</label>
           </fieldset>
         </div>
         <div data-role="fieldcontain">
           <label for="group" class="select"  id="select">Select the Adventurer's class:</label>
-          <select name="groups" id="groups" data-native-menu="false" class="required">
+          <select name="groups" id="groups" data-native-menu="false" class="required" data-theme="e">
             <option data-placeholder="true" value>-- Choose A Class --</option>
             <option value="warrior">Warrior</option>
             <option value="rogue">Rogue</option>
@@ -65,26 +53,25 @@
         </div>
         <div data-role="fieldcontain">
           <label for="date">Date added to party:</label>
-          <input type="date" name="date" id="date" data-role="datebox" class="required date" value="" data-options='{"mode": "datebox",  "dateFormat": "mm/dd/YYYY", "disableManualInput": true}' />
+          <input type="date" name="date" id="date" class="required date" value="put date here" data-theme="e"/>
         </div>
         <div data-role="fieldcontain">
-          <label for="guild">Is a member of the guild?</label>
-          <select data-role="slider" name="guild" id="guild">
-            <option value="false">No</option>
-            <option value="true">Yes</option>
-          </select>
+          <input type="checkbox" name="guild" id="guild"  data-theme="e"/><label for="guild">Is a member of the guild?</label>
         </div>
         <div data-role="fieldcontain">
           <label for="comments" class="ui-hidden-accessible">Comments</label>
-          <textarea id="comments" name="comments" placeholder="Comments here."></textarea>
+          <textarea id="comments" name="comments" data-theme="e">Don't forget to change the comments so you won't forget important stuff later about your new character, probably while your deep in a dungeon and you really need to know right then but you can't remember and don't have it written down.. too bad!</textarea>
         </div>
         <div data-role="fieldcontain">
           <div class="ui-grid-a">
-              <div class="ui-block-a" align="left"><input type="submit" id="submit" data-icon="check" data-inline="true" data-theme="b" value="Submit"/></div>
-              <div class="ui-block-b" align="right"><a href="index.html" id="cancel" data-icon="delete" data-role="button" data-theme="a" data-inline="true">Cancel</a></div>
+              <div class="ui-block-a" align="right"><a href="badindex.html" id="cancel" data-icon="check" data-role="button" data-theme="e" >Cancel</a></div>
+              <div class="ui-block-b" align="left"><input type="submit" id="submit" data-icon="delete" data-inline="true" data-theme="a" value="Submit"/></div>
           </div>
         </div>
       </form>
+    </div>
+    <div data-role="footer" data-position="fixed" align="center">
+        <img src="images/logo.gif"/>
     </div>
 </div>
 <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script> 

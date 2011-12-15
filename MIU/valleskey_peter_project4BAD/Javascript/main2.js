@@ -1,41 +1,18 @@
 // Peter Valleskey
 // MIU 12/2011
-// Project 3
+// Project 3 -- BAD MAIN
 
 $(document).ready(function() {
 	var getID = function (x) {
         var theElement = document.getElementById(x);
         return theElement;
     };
-	
-	function makeDate() {
- 	  var mydate=new Date()
-	  var theyear=mydate.getYear()
-	  if (theyear < 1000)
-	  theyear+=1900
-	  var theday=mydate.getDay()
-	  var themonth=mydate.getMonth()+1
-	  if (themonth<10)
-	  themonth="0"+themonth
-	  var theday=mydate.getDate()
-	  if (theday<10)
-	  theday="0"+theday
-	  var displayfirst=themonth
-	  var displaysecond=theday
-	  var displaythird=theyear
-	  return displayfirst+"/"+displaysecond+"/"+displaythird
-	}
-	getID('date').value = makeDate();
 
 
 	var parseAdvForm = function(data) {
 	        console.log(data); //data = array[object { name: (HTML <input name="name">, value: (input from form) } 
 			console.log(data[0].value); // data[object].valueFromFormField
-<<<<<<< HEAD
 	  		window.location.reload();
-=======
-	  		//window.location.reload();
->>>>>>> master
 			alert("Form Submitted Sucessfully!");
 	  //modified storeData function called here
 };
@@ -77,32 +54,17 @@ var getSelectedRadio = function () {
         }
     };
 	
-	jQuery.extend(jQuery.mobile.datebox.prototype.options, {
-      'dateFormat': 'dd.mm.YYYY',
-      'headerFormat': 'dd.mm.YYYY'
-	});
 	
 	
 	var advForm = $('#advForm');
 	
 	advForm.validate({
-		invalidHandler: function(form, validator){},
+		invalidHandler: function(form, validator){
+			alert('You had error(s)');
+			},
 		submitHandler: function() {
 			var data = advForm.serializeArray();
-<<<<<<< HEAD
 			parseAdvForm(data);
 		}
 	});
 });
-=======
-			localStorage.setItem("formdata", data);
-		}
-	});
-});
-			/*
-			submitHander: function(){
-			var data = $(".myform").serializeArray();
-			localStorage.setItem("formdata", data);
-			}
-			*/
->>>>>>> master

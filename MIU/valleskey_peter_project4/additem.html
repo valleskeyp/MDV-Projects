@@ -10,45 +10,33 @@
 <meta name="viewport" content="width=device-width, user-scalable=no"/>
 <meta http-equiv="cleartype" content="on"/>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" /> 
+<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" />
 <link rel="stylesheet" href="css/styles.css"  />
 <script src="Javascript/libs/modernizr.custom.min.js"></script>
 <title>Adventuring Group Creator</title>
 </head>
 <body>
 <div data-role="page">
-  <div data-role="header">
-    <a href="index.html" data-role="button" data-direction="reverse">Home</a><h3>Add Adventurer</h3>
+  <div data-role="header" data-position="fixed">
+    <h1><a id="logo" href="index.html" data-ajax="false"><img src="images/logo.gif" data-role="button"/></a></h1>
   </div>
   <div data-role="content">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <form action="" method="post" id="advForm">
-=======
       <form action="" id="advForm">
->>>>>>> master
-=======
-      <form action="" id="advForm">
->>>>>>> master
-=======
-      <form action="" id="advForm">
->>>>>>> master
-        <span> <small>*You must fill out all fields except comments.</small> </span>
+        <span> <small>*You must fill out all fields except comments.</small></span>
         <div data-role="fieldcontain">
           <label for="name">Adventurer's name:</label>
           <input type="text" name="name" id="name" class="required"/>
         </div>
         <div data-role="fieldcontain">
           <label for="age">Age:</label>
-          <input type="range" name="age" id="age" value="26" min="18" max="80"  />
+          <input type="range" name="age" id="age" value="26" min="18" max="80"/>
         </div>
         <div data-role="fieldcontain">
           <fieldset data-role="controlgroup" id="gender" >
             <legend>Choose gender:</legend>
             <input type="radio" name="sex" id="male" value="Male" class="required"/>
             <label for="male">Male</label>
-            <input type="radio" name="sex" id="female" value="Female" />
+            <input type="radio" name="sex" id="female" value="Female"/>
             <label for="female">Female</label>
           </fieldset>
         </div>
@@ -79,17 +67,22 @@
           <textarea id="comments" name="comments" placeholder="Comments here."></textarea>
         </div>
         <div data-role="fieldcontain">
-          <div class="ui-grid-a">
-              <div class="ui-block-a" align="left"><input type="submit" id="submit" data-icon="check" data-inline="true" data-theme="b" value="Submit"/></div>
-              <div class="ui-block-b" align="right"><a href="index.html" id="cancel" data-icon="delete" data-role="button" data-theme="a" data-inline="true">Cancel</a></div>
-          </div>
+            <div>
+              <div class="ui-grid-a">
+                  <div class="ui-block-a" align="left"><input type="submit" id="submit" data-icon="check" data-inline="true" data-theme="b" value="Submit"/></div>
+                  <div class="ui-block-b" align="right"><a href="index.html" id="cancel" data-icon="delete" data-role="button" data-theme="a" data-inline="true" data-ajax="false">Cancel</a></div>
+              </div>
+            </div>
+            <div>
+              <div align="right"><a href="" id="clear" data-icon="alert" data-role="button" data-theme="a" data-inline="true" data-ajax="false">Clear Storage</a></div>
+            </div>
         </div>
       </form>
     </div>
 </div>
-<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script> 
-<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script> 
-<script src="Javascript/libs/jquery.validate.min.js" type="text/javascript"></script> 
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+<script src="Javascript/libs/jquery.validate.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.js"></script>
 <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script>
 

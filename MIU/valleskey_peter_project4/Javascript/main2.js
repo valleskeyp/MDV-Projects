@@ -31,15 +31,25 @@ $(document).ready(function() {
 	var parseAdvForm = function(data) {
 	        console.log(data); //data = array[object { name: (HTML <input name="name">, value: (input from form) } 
 			console.log(data[0].value); // data[object].valueFromFormField
-<<<<<<< HEAD
-	  		window.location.reload();
-=======
 	  		//window.location.reload();
->>>>>>> master
 			alert("Form Submitted Sucessfully!");
 	  //modified storeData function called here
 };
-	
+
+var clearLocal = function() {
+        if(localStorage.length === 0) {
+            alert("There is no data to clear.");
+        }else{
+            localStorage.clear();
+            alert("Data cleared.");
+            window.location.reload();
+            return false;
+        }
+    };
+
+var clearLink = getID('clear');
+clearLink.addEventListener("click", clearLocal);
+		
 var storeData = function(key) {
 		if (!key) {
             var id          = Math.floor(Math.random()*10000000001);
@@ -89,20 +99,9 @@ var getSelectedRadio = function () {
 		invalidHandler: function(form, validator){},
 		submitHandler: function() {
 			var data = advForm.serializeArray();
-<<<<<<< HEAD
-			parseAdvForm(data);
+			localStorage.setItem("formdata", data);
+			window.location.reload();
+			alert("Form Submitted SUcessfully!");
 		}
 	});
 });
-=======
-			localStorage.setItem("formdata", data);
-		}
-	});
-});
-			/*
-			submitHander: function(){
-			var data = $(".myform").serializeArray();
-			localStorage.setItem("formdata", data);
-			}
-			*/
->>>>>>> master

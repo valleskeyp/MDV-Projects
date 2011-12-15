@@ -35,7 +35,21 @@ $(document).ready(function() {
 			alert("Form Submitted Sucessfully!");
 	  //modified storeData function called here
 };
-	
+
+var clearLocal = function() {
+        if(localStorage.length === 0) {
+            alert("There is no data to clear.");
+        }else{
+            localStorage.clear();
+            alert("Data cleared.");
+            window.location.reload();
+            return false;
+        }
+    };
+
+var clearLink = getID('clear');
+clearLink.addEventListener("click", clearLocal);
+		
 var storeData = function(key) {
 		if (!key) {
             var id          = Math.floor(Math.random()*10000000001);
@@ -86,12 +100,8 @@ var getSelectedRadio = function () {
 		submitHandler: function() {
 			var data = advForm.serializeArray();
 			localStorage.setItem("formdata", data);
+			window.location.reload();
+			alert("Form Submitted SUcessfully!");
 		}
 	});
 });
-			/*
-			submitHander: function(){
-			var data = $(".myform").serializeArray();
-			localStorage.setItem("formdata", data);
-			}
-			*/

@@ -1,8 +1,16 @@
 @charset "UTF-8";
 /* Peter Valleskey
 MIU 12/2011
-Project 3 */
+Project 1 */
+/* bad project css */
 
+body {
+	background-image:none;
+	font-family:"Times New Roman", Times, serif;
+	background: url(../images/bg.jpg);
+	color:#FFF;
+	font-size:16px;
+}
 h1 {
 	text-align:center;
 	padding:5px;
@@ -18,6 +26,9 @@ li#list {
 legend {
 	text-align:center;
 }
+div#errors {
+	color:#A00;
+}
 img {
 	border-radius: 6px;
 	box-shadow: 2px 3px 0 0 rgba(72, 72, 72, 1);
@@ -29,15 +40,32 @@ a:link, a:visited {
 	text-decoration:none;
 }
 label.error{
-	display:block;
-	margin:10px 0;
-	color:#cc0000;
-}
-body {
-    background:;
+	visibility:hidden;
 }
 .ui-page {
-    background: transparent;
+	background-image: linear-gradient(top, rgb(255,0,0) 14%, rgb(255,140,0) 28%, rgb(247,255,0) 42%, rgb(39,255,28) 56%, rgb(56,112,255) 70%, rgb(132,0,255) 85%, rgb(221,0,255) 100%);
+	background-image: -o-linear-gradient(top, rgb(255,0,0) 14%, rgb(255,140,0) 28%, rgb(247,255,0) 42%, rgb(39,255,28) 56%, rgb(56,112,255) 70%, rgb(132,0,255) 85%, rgb(221,0,255) 100%);
+	background-image: -moz-linear-gradient(top, rgb(255,0,0) 14%, rgb(255,140,0) 28%, rgb(247,255,0) 42%, rgb(39,255,28) 56%, rgb(56,112,255) 70%, rgb(132,0,255) 85%, rgb(221,0,255) 100%);
+	background-image: -webkit-linear-gradient(top, rgb(255,0,0) 14%, rgb(255,140,0) 28%, rgb(247,255,0) 42%, rgb(39,255,28) 56%, rgb(56,112,255) 70%, rgb(132,0,255) 85%, rgb(221,0,255) 100%);
+	background-image: -ms-linear-gradient(top, rgb(255,0,0) 14%, rgb(255,140,0) 28%, rgb(247,255,0) 42%, rgb(39,255,28) 56%, rgb(56,112,255) 70%, rgb(132,0,255) 85%, rgb(221,0,255) 100%);
+	
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.14, rgb(255,0,0)),
+	color-stop(0.28, rgb(255,140,0)),
+	color-stop(0.42, rgb(247,255,0)),
+	color-stop(0.56, rgb(39,255,28)),
+	color-stop(0.7, rgb(56,112,255)),
+	color-stop(0.85, rgb(132,0,255)),
+	color-stop(1, rgb(221,0,255))
+	);
+	}
+thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
+min-height: 0px;
+max-height: 30px;
+padding-left: 100px;
 }
 a#editLink {
 	color:#FFF;
@@ -104,6 +132,6 @@ a#back {
 	border-radius: 25px;
 	box-shadow: 3px 4px 0 0 rgba(72, 72, 72, 1);
 }
-#gallery .ui-grid-b div {
+.ui-grid-b div {
 	text-align:center;
 }
